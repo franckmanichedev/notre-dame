@@ -1,0 +1,35 @@
+/* Styles pour les lectures liturgiques */
+.lecture-card {
+    background-color: #f8f9fa;
+    transition: transform 0.2s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.lecture-content {
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+.lecture-content em {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.border-primary {
+    border-color: #4e73df !important;
+}
+
+/* Animation de chargement */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#liturgie-container {
+    animation: fadeIn 0.5s ease-out;
+}

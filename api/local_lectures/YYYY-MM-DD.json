@@ -1,0 +1,22 @@
+{
+    "messes": [
+        {
+            "heure": "08:00",
+            "lieu": "Église Notre Dame du Rosaire",
+            "lectures": [
+                {
+                    "type": "première lecture",
+                    "titre": "Livre du Prophète Isaïe",
+                    "ref": "Is 55, 10-11",
+                    "contenu": "Ainsi parle le Seigneur..."
+                },
+                {
+                    "type": "évangile",
+                    "titre": "Évangile de Jésus-Christ selon saint Matthieu",
+                    "ref": "Mt 13, 1-23",
+                    "contenu": "Ce jour-là, Jésus était sorti de la maison..."
+                }
+            ]
+        }
+    ]
+}
