@@ -3863,19 +3863,19 @@ fieldset:disabled .btn {
 
 .btn-primary {
   --bs-btn-color: #0a0a0a;
-  --bs-btn-bg: #e91e63;
-  --bs-btn-border-color: #e91e63;
+  --bs-btn-bg: #0063b9;
+  --bs-btn-border-color: #0063b9;
   --bs-btn-hover-color: #0a0a0a;
-  --bs-btn-hover-bg: rgb(236.3, 63.75, 122.4);
-  --bs-btn-hover-border-color: rgb(235.2, 52.5, 114.6);
+  --bs-btn-hover-bg: rgb(68, 153, 228);
+  --bs-btn-hover-border-color: rgb(60, 152, 231);
   --bs-btn-focus-shadow-rgb: 200, 27, 86;
   --bs-btn-active-color: #0a0a0a;
-  --bs-btn-active-bg: rgb(237.4, 75, 130.2);
-  --bs-btn-active-border-color: rgb(235.2, 52.5, 114.6);
+  --bs-btn-active-bg: rgb(76, 156, 226);
+  --bs-btn-active-border-color: rgb(105, 179, 243);
   --bs-btn-active-shadow: none;
   --bs-btn-disabled-color: #0a0a0a;
-  --bs-btn-disabled-bg: #e91e63;
-  --bs-btn-disabled-border-color: #e91e63;
+  --bs-btn-disabled-bg: #0063b9;
+  --bs-btn-disabled-border-color: #0063b9;
 }
 
 .btn-secondary {
@@ -21888,19 +21888,19 @@ fieldset:disabled .btn {
 
 .btn-primary,
 .btn.bg-gradient-primary {
-  box-shadow: 0 2px 2px 0 rgba(233, 30, 99, 0.1), 0 3px 1px -2px rgba(233, 30, 99, 0.18), 0 1px 5px 0 rgba(233, 30, 99, 0.15);
+  box-shadow: 2px 2px 2px 2px rgba(68, 153, 228, 0.5), 0 3px 1px -2px rgba(68, 153, 228, 0.5), 0 1px 5px 0 rgba(68, 153, 228, 0.5);
 }
 
 .btn-primary:hover,
 .btn.bg-gradient-primary:hover {
-  background-color: #e91e63;
-  border-color: #e91e63;
-  box-shadow: 0 8px 14px -8px rgba(233, 30, 99, 0.3), 0 3px 18px 0 rgba(233, 30, 99, 0.1), 0 7px 8px -4px rgba(233, 30, 99, 0.18);
+  background-color: #0063b9;
+  border-color: #0063b9;
+  box-shadow: 8px 8px 14px 8px rgba(68, 153, 228, 0.3), 0 3px 18px 0 rgba(68, 153, 228, 0.1), 0 7px 8px -4px rgba(68, 153, 228, 0.18);
 }
 
 .btn-primary .btn.bg-outline-primary,
 .btn.bg-gradient-primary .btn.bg-outline-primary {
-  border: 1px solid #e91e63;
+  border: 1px solid #0063b9;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,
@@ -21909,8 +21909,8 @@ fieldset:disabled .btn {
 .btn.bg-gradient-primary:not(:disabled):not(.disabled).active,
 .btn.bg-gradient-primary:not(:disabled):not(.disabled):active,
 .show>.btn.bg-gradient-primary.dropdown-toggle {
-  color: color-yiq(#e91e63);
-  background-color: #e91e63;
+  color: color-yiq(#0063b9);
+  background-color: #0063b9;
 }
 
 .btn-primary.focus,
@@ -21978,7 +21978,7 @@ fieldset:disabled .btn {
 
 .btn-success,
 .btn.bg-gradient-success {
-  box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.1), 0 3px 1px -2px rgba(76, 175, 80, 0.18), 0 1px 5px 0 rgba(76, 175, 80, 0.15);
+  box-shadow: 2px 2px 2px 2px rgba(76, 175, 80, 0.1), 0 3px 1px -2px rgba(76, 175, 80, 0.18), 0 1px 5px 0 rgba(76, 175, 80, 0.15);
 }
 
 .btn-success:hover,

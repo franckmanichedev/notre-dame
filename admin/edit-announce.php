@@ -17,7 +17,7 @@
                     ?>
                     <div class="card">
                         <div class="card-body">
-                            <form action="code.php" method="POST" enctype="multipart/form-data">
+                            <form id="editAnnounceForm" action="javascript:void(0);" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="announce_id" value="<?= $data['id']?>">
                                 
                                 <div class="row g-3">
@@ -44,6 +44,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="invalid-feedback">
+                                        Ce champ est obligatoire
+                                    </div>
                                     <div class="col-12 mt-4">
                                         <button type="submit" class="btn btn-primary w-100" name="update_announce_btn">
                                             <i class="bi bi-save me-1"></i> Enregistrer les modifications
@@ -63,5 +66,53 @@
             ?>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/jquery.validate.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#editAnnounceForm').on('submit', function(e) {
+                e.preventDefault();
+                var formData = new FormData(this);
+                
+                // Afficher un loader
+                Swal.fire({
+                    title: 'Mise à jour en cours',
+                    html: 'Veuillez patienter...',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading()
+                    }
+                });
+
+                $.ajax({
+                    url: 'code.php',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        Swal.close();
+                        if(response.status === 200) {
+                            Swal.fire('Succès!', response.message, 'success')
+                                .then(() => {
+                                    if(response.redirect) {
+                                        window.location.href = response.redirect;
+                                    }
+                                });
+                        } else {
+                            Swal.fire('Erreur!', response.message, 'error');
+                        }
+                    },
+                    error: function() {
+                        Swal.close();
+                        Swal.fire('Erreur', 'Problème de communication avec le serveur', 'error');
+                    }
+                });
+            });
+        });
+    </script>
 
 <?php include("./includes/foot.php"); ?>

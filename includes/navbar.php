@@ -44,10 +44,13 @@
                     <ul class="nav">
                         <li><a href="index.php" class="parent <?= $page == "index.php" ? "active":"";?>">Accueil</a></li>
                         <li class="nav-item dropdown">
-                            <a href="announcements.php" class="parent <?= $page == "announcements.php" ? "active":"";?> nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">A propos</a>
+                            <a class="parent nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">La Paroisse</a>
                             <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="stories.php" class="<?= $page == "stories.php" ? "active":"";?>">Historique</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="team.php" class="<?= $page == "team.php" ? "active":"";?>">Équipe pastorale</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="announcements.php" class="<?= $page == "announcements.php" ? "active":"";?>">Annonces</a>
@@ -57,9 +60,34 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="about.php" class="parent <?= $page == "about.php" ? "active":"";?>">Evénements</a></li> 
-                        <li><a href="tickets.php" class="parent <?= $page == "tickets.php" ? "active":"";?>">Annonces</a></li> 
-                        <li><a href="ticket-details.php" class="parent <?= $page == "ticket-details.php" ? "active":"";?>">Coin de vente</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="parent nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Liturgique</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="stories.php" class="<?= $page == "stories.php" ? "active":"";?>">Horaires des messes</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="about.php" class="<?= $page == "about.php" ? "active":"";?>">Evénements spéciaux</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="stories.php" class="<?= $page == "stories.php" ? "active":"";?>">Lectures du jour</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="parent nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Annonces</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="tickets.php" class="<?= $page == "tickets.php" ? "active":"";?>">Voir les annonces</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="ticket-details.php" class="<?= $page == "ticket-details.php" ? "active":"";?>">Activités du Moment</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="ticket-details.php" class="<?= $page == "ticket-details.php" ? "active":"";?>">Nos Projets</a>
+                                </li>
+                            </ul>
+                        </li>
                         <?php
                             if(isset($_SESSION['auth'])){
                         ?>

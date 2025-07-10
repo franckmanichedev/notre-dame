@@ -37,19 +37,20 @@
             </div>
         </div>
 
+        <!-- SweetAlert JS -->
+        <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+
         <script src="assets/js/jquery-3.7.1.min.js"></script>
-        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="../../assets/js/jquery.counterup.min.js"></script>
         <script src="assets/js/popper.min.js" type="text/javascript"></script>
         <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="assets/js/bootstrap.bundle.min.js" type="text/javascript"></script>
         <script src="assets/js/perfect-scrollbar.min.js"></script>
-        <script src="assets/js/chart.js"></script>
-
-        <!-- SweetAlert JS -->
-        <script src="../../assets/js/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         
         <!-- Custom JS -->
         <script src="assets/js/custom.js" type="text/javascript"></script>
+        <script src="assets/js/crud.js" type="text/javascript"></script>
         <script src="../../assets/js/aelf.api.js"></script>
         
         <!-- ALERTIFY JS -->

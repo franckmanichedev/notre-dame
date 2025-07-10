@@ -1,0 +1,29 @@
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+    
+#     # Empêche l'accès direct aux dossiers sensibles
+#     RewriteRule ^admin/ajax/ - [F,L]
+    
+#     # Autorise l'accès aux fichiers PHP dans ajax/
+#     RewriteRule ^admin/ajax/(.*\.php)$ admin/ajax/$1 [L]
+    
+#     # Redirections propres
+#     RewriteCond %{REQUEST_FILENAME} !-f
+#     RewriteCond %{REQUEST_FILENAME} !-d
+#     RewriteRule . index.php [L]
+# </IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /NOTRE-DAME/
+
+    # Autoriser l'accès direct aux fichiers PHP dans admin/ajax/
+    RewriteRule ^admin/ajax/(.*\.php)$ - [L]
+
+    # Autoriser l'accès direct à index.php, mass.php, etc.
+    RewriteRule ^(index|mass|about|contact|...)\.php$ - [L]
+
+    # Empêcher l'accès direct aux autres fichiers PHP
+    RewriteCond %{REQUEST_URI} \.php$
+    # RewriteRule ^ - [F]
+</IfModule>

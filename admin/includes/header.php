@@ -1,8 +1,10 @@
 <?php 
-
-    session_start();
-
+    if (session_status() === PHP_SESSION_NONE) session_start();
+    $base_path = 'http://'.$_SERVER['HTTP_HOST'].'/NOTRE-DAME/admin/';
 ?>
+<script>
+    const BASE_PATH = '<?php echo $base_path; ?>';
+</script>
 
 <!DOCTYPE html>
 
@@ -24,15 +26,28 @@
         <!-- CSS Files -->
         <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 
-        <!-- CSS Just for demo purpose, don't include it in your project -->
+        <!-- CSS -->
         <link href="assets/css/demo.css" rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/styles.css" />
         <link href="assets/css/material-dashboard.css" rel="stylesheet" />
         <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet" />
+
+        <!-- FullCalendar CSS -->
+        <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/main.min.css' rel='stylesheet' />
+        <!-- Localisation française -->
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/locales/fr.global.min.js'></script>
+        <!-- CALENDAR JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.18/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.18/index.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.18/index.global.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.18/index.global.min.js"></script>
+        <script>
+            const BASE_URL = '<?= "http://".$_SERVER['HTTP_HOST']."/"; ?>';
+        </script>
         
         <!-- ALERTIFY CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" integrity="sha512-IXuoq1aFd2wXs4NqGskwX2Vb+I8UJ+tGJEu/Dc0zwLNKeQ7CW3Sr6v0yU3z5OQWe3eScVIkER4J9L7byrgR/fA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/bootstrap.min.css" integrity="sha512-6xVTeh6P+fsqDhF7t9sE9F6cljMrK+7eR7Qd+Py7PX5QEVVDLt/yZUgLO22CXUdd4dM+/S6fP0gJdX2aSzpkmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/bootstrap.min.css" />
         <style>
             .form-control, .form-select{
                 padding: 8px 10px;

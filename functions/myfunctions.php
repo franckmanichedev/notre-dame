@@ -37,17 +37,6 @@
         return json_decode($response, true);
     }
 
-    // Fonction pour enregistrer les actions dans un fichier log
-    if (!function_exists('logAction')){
-        function logAction($action, $details) {
-            $logDir = '../logs';
-            if (!is_dir($logDir)) {
-                mkdir($logDir, 0777, true);
-            }
-            file_put_contents($logDir.'/announce.log', date('[Y-m-d H:i:s]')." - $action - $details\n", FILE_APPEND);
-        }
-    }
-
     // Fonction pour rediriger les utilisateur
     if (!function_exists('redirect')){
         function redirect($url, $message){

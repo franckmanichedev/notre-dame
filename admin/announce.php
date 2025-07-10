@@ -1,5 +1,4 @@
-<?php 
-
+<?php
     // session_start();
     include("includes/header.php");
     include("../middleware/adminMiddleware.php");
@@ -14,20 +13,7 @@
                         Toutes les annonces disponibles
                         <a href="add-announce.php" data-url="add-announce.php" class="btn btn-primary float-end cta-demo" data-bs-toggle="modal" data-bs-target="#demoModal"><i class="fa fa-plus me-2"></i> Ajouter une annonce</a>
                     </div>
-                    <div class="card-body table-full-width table-responsive" id="announce_table">
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <input type="text" id="searchAnnounce" class="form-control" placeholder="Rechercher une annonce...">
-                            </div>
-                            <div class="col-md-6">
-                                <select class="form-select" id="categoryFilter">
-                                    <option value="">Toutes catégories</option>
-                                    <option value="liturgie">Liturgie</option>
-                                    <option value="activites">Activités</option>
-                                    <option value="projets">Projets</option>
-                                </select>
-                            </div>
-                        </div>
+                    <div class="card-body ps-5 pe-5 table-full-width table-responsive" id="announce_table">
                         <table class="table table-hover table-striped">
                             <thead>
                                 <th width="30%">Document</th>
@@ -78,7 +64,7 @@
                                             <?php
                                         }
                                     } else {
-                                        echo "<tr><td class='alert alert-danger' colspan='5'>Aucune catégorie trouvée</td></tr>";
+                                        echo "<tr><td class='text-white alert alert-danger' colspan='5'>Aucune catégorie trouvée</td></tr>";
                                     }
                                 ?>
                             </tbody>
